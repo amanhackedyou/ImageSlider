@@ -1,4 +1,7 @@
 let dots = document.querySelectorAll(".dot");
+let slides = 0;
+let maxSlides = 3;
+
 for (let i=0; i<=dots.length-1; i++){
   dots[i].onclick = () => {
     let slide = document.querySelector(".slide");
@@ -37,5 +40,16 @@ for (let i=0; i<=dots.length-1; i++){
         break;
   
     }
+
+    slides++;
   }
 }
+
+setInterval(() => {
+  // slides++;
+  if (slides >= maxSlides+1){
+    slides = 0;
+  }
+  
+  document.querySelectorAll('.dot')[slides].click();
+}, 5000);
