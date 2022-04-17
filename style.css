@@ -1,0 +1,48 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+}
+
+.slide-box{
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.slide{
+  display: flex;
+  transition: all .5s;
+}
+
+.slide-img{
+  width: 100%;
+}
+
+.indegator{
+  display: flex;
+  background: rgba(0, 0, 0, 0,3);
+  padding: 2px 0;
+  justify-content: center;
+  gap: 10px;
+}
+
+.dot{
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.active-slide-dot{
+  background: white;
+}
